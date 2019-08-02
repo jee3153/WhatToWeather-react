@@ -1,0 +1,22 @@
+.Header {
+    border: 1px solid red;
+    overflow: auto;
+
+    &__text,
+    &__umbrella-icon,
+    &__outfit-sugestion {
+        display: inline-grid;
+    }
+    &__text {
+        font-size: 1.7rem;
+        font-weight: 200;
+
+        border: 1px solid red;
+    }
+
+    &__outfit-sugestion {
+    }
+
+    &__umbrella-icon {
+    }
+}

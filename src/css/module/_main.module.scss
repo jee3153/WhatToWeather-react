@@ -1,0 +1,20 @@
+.Main {
+    color: #707070;
+    margin-bottom: 182px;
+
+    &__location {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    &__temperature {
+        font-size: 3.437rem;
+        font-weight: 200;
+    }
+
+    &__summary {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-top: 2px;
+    }
+}
