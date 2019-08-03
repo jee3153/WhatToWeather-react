@@ -1,0 +1,27 @@
+.WeatherToday {
+    &__header__hourly {
+        display: grid;
+        grid-template-columns: 90px 1fr 30px 30px auto;
+        align-items: end;
+
+        &__day {
+            grid-column: 1;
+        }
+
+        &__max {
+            grid-column: 3;
+        }
+
+        &__min {
+            grid-column: 4;
+        }
+
+        &__summary {
+            grid-column: 5;
+        }
+    }
+
+    &--closer-to-hr {
+        margin-bottom: 1px;
+    }
+}

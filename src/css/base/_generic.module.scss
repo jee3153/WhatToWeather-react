@@ -1,5 +1,9 @@
 .generic {
-    & hr {
+    hr {
         border: 0.5px solid #fff;
+    }
+
+    h2 {
+        display: inline;
     }
 }
