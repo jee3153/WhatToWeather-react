@@ -2,7 +2,6 @@ import React from 'react'
 import WeatherHourly from './WeatherHourly/WeatherHourly'
 import WeatherDaily from './WeatherDaily/WeatherDaily'
 import Header from '../Header/Header'
-import Btn from './../Btn'
 
 
 const WeatherToday = (props) => {
@@ -30,23 +29,21 @@ const WeatherToday = (props) => {
         <div className='WeatherToday generic'>
             <Header>
                 <div className="WeatherToday__header__hourly WeaterToday--closer-to-hr Header--margin">
-                    <h2 className='WeatherToday__header__element WeatherToday__header__hourly__day Header__title'>{whatToday()}</h2>
-                    <span className='WeatherToday__header__element WeatherToday__header__hourly__max'>{props.weatherConv(props.daily[0].apparentTemperatureMax)}°</span>
-                    <span className='WeatherToday__header__element WeatherToday__header__hourly__min'>{props.weatherConv(props.daily[0].apparentTemperatureMin)}°</span>
-                    <span className='WeatherToday__header__element WeatherToday__header__hourly__summary'>{props.daily[0].summary}</span>
+                    <h2 className='WeatherToday__header__hourly__day Header__title'>{whatToday()}</h2>
+
+                    <span className='WeatherToday__header__hourly__max'>{props.weatherConv(props.daily[0].apparentTemperatureMax)}°</span>
+                    <span className='WeatherToday__header__hourly__min'>{props.weatherConv(props.daily[0].apparentTemperatureMin)}°</span>
+
+
+
                 </div>
 
             </Header>
+            <p className='WeatherToday__header__hourly__summary'>{props.daily[0].summary}</p>
 
             <WeatherHourly hourly={props.hourly} weatherConv={props.weatherConv} />
 
-            <Header>
-                <div className="WeatherToday__header__daily WeaterToday--closer-to-hr Header--margin">
-                    <h2 className='Header__title'>Weekly</h2>
-                </div>
-            </Header>
-
-            <WeatherDaily daily={props.daily} weatherConv={props.weatherConv} days={whatToday} />
+            <WeatherDaily daily={props.daily} weatherConv={props.weatherConv} days={whatToday} icon={props.icon} />
         </div>
     )
 }

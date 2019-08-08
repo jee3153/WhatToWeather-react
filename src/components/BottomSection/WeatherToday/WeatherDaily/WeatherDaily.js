@@ -13,18 +13,23 @@ const WeatherDaily = (props) => {
 
     const numToDay = (n) => {
         const weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
+        weekday[0] = "Sun";
+        weekday[1] = "Mon";
+        weekday[2] = "Tue";
+        weekday[3] = "Wed";
+        weekday[4] = "Thurs";
+        weekday[5] = "Fri";
+        weekday[6] = "Sat";
 
         return weekday[n]
     }
 
-    console.log(weeklyDays(1564527600))
+    const tempAvg = (min, max) => {
+
+        let avg = (min + max) / 2;
+        return props.weatherConv(avg);
+
+    }
 
     // const weeklyDays = () => {
     //     const d = new Date();
@@ -41,15 +46,29 @@ const WeatherDaily = (props) => {
 
     // }
 
+
+
+    const a = [0, 1, 2, 3, 4]
+
     return (
         <div className='WeatherDaily'>
-            <ul>
+
+            <ul className='WeatherDaily__lists'>
+                <div className="WeatherDaily__template">
+                    <div className='WeatherDaily__hr-line'></div>
+                    {a.map(i => {
+                        return <div className={`WeatherDaily__circle WeatherDaily__circle-${i}`}></div>
+                    })}
+                </div>
                 {props.daily.map((item, index) => (
-                    <li key={index}>
-                        <span>{weeklyDays(item.time)}</span>
-                        <img src={`/images/weather/${item.icon}.svg`} alt="weather icon" />
-                        <span>{props.weatherConv(item.apparentTemperatureMax)}°</span>
-                        <span>{props.weatherConv(item.apparentTemperatureMin)}°</span>
+                    <li className={`WeatherDaily__list-item WeatherDaily__list-item-${index}`} key={index}>
+
+                        <img className='WeatherDaily__icon' src={`/images/weather/${item.icon}.svg`} alt="weather icon" />
+                        <p className='WeatherDaily__day'>{weeklyDays(item.time)}</p>
+                        <p className="WeatherDaily__temp">
+                            {tempAvg(item.apparentTemperatureMax, item.apparentTemperatureMin)}°
+                        </p>
+
 
                     </li>
                 ))}

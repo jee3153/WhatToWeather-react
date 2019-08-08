@@ -5,9 +5,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+html,
+body,
+#root,
+.App {
+    overflow: auto;
+}
 
 .App {
+    height: 100%;
     text-align: center;
+    color: $main-text;
+    background-image: linear-gradient($main-text, #19294d);
+
+    &--loading {
+        height: 100vh;
+        background-color: #798ab3;
+    }
+
+    &--rain {
+        background-image: linear-gradient($main-text, #19294d), url('/images/loader-icon/blur-cars-dew.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: exclusion;
+    }
 }
 
 body {
@@ -16,6 +38,13 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-image: linear-gradient(#fff, #19294d);
-    color: #fff;
+    // background-image: linear-gradient($main-text, #19294d), url('/images/loader-icon/blur-cars-dew.jpg');
+    // background: center cover no-repeat;
+}
+
+.loader-icon {
+    width: 30px;
+    height: auto;
+    position: relative;
+    top: 50%;
 }

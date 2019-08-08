@@ -1,7 +1,12 @@
 .Main {
-    color: #707070;
-    margin-bottom: 182px;
-
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    &--rain {
+        color: $main-text;
+    }
+    &--clear {
+        color: $muted-grey;
+    }
     &__location {
         font-size: 1.8rem;
         font-weight: 300;
