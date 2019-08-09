@@ -27,7 +27,7 @@ const WeatherDaily = (props) => {
     const tempAvg = (min, max) => {
 
         let avg = (min + max) / 2;
-        return props.weatherConv(avg);
+        return props.toCelsius(avg);
 
     }
 
@@ -49,7 +49,7 @@ const WeatherDaily = (props) => {
 
 
     const a = [0, 1, 2, 3, 4]
-
+    let daily = props.daily
     return (
         <div className='WeatherDaily'>
 
@@ -57,10 +57,10 @@ const WeatherDaily = (props) => {
                 <div className="WeatherDaily__template">
                     <div className='WeatherDaily__hr-line'></div>
                     {a.map(i => {
-                        return <div className={`WeatherDaily__circle WeatherDaily__circle-${i}`}></div>
+                        return <div className={`WeatherDaily__circle WeatherDaily__circle-${i}`} key={i} ></div>
                     })}
                 </div>
-                {props.daily.map((item, index) => (
+                {daily.map((item, index) => (
                     <li className={`WeatherDaily__list-item WeatherDaily__list-item-${index}`} key={index}>
 
                         <img className='WeatherDaily__icon' src={`/images/weather/${item.icon}.svg`} alt="weather icon" />

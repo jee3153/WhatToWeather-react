@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header/Header'
+
 
 const WhatToWear = (props) => {
 
@@ -48,8 +48,8 @@ const WhatToWear = (props) => {
         }
         return itemArr
     }
-    console.log(props.temperature)
-    console.log(decisionMaker(props.temperature));
+    // console.log(props.currently)
+    // console.log(decisionMaker(props.temperature));
 
     const outfitSuggestion = (temp) => {
         let msg;
@@ -67,11 +67,11 @@ const WhatToWear = (props) => {
         )
     }
 
-
+    let items = props.currently;
     return (
         <div className='WhatToWear'>
 
-            {props.icon === 'rain' && (
+            {items.icon === 'rain' && (
                 <div className='WhatToWear__rain-warning'>
                     <div className='WhatToWear__rain-warning__icon'>
                         <img className='WhatToWear__rain-warning__icon__warning' src={`/images/clothes/exclamation.svg`} alt="rain warning" />

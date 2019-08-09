@@ -9,13 +9,6 @@ import WhatToWear from './components/BottomSection/WhatToWear/WhatToWear'
 
 class App extends Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     items: [],
-  //     isLoaded: false,
-  //   }
-  // }
   state = {
     items: [],
     hourly: [],
@@ -24,7 +17,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    let time
+    // let time
     let lat
     let long
 
@@ -32,10 +25,10 @@ class App extends Component {
 
     if (geo) {
       geo.getCurrentPosition(position => {
-        const d = new Date()
+        // const d = new Date()
         lat = position.coords.latitude
         long = position.coords.longitude
-        time = d.getTime();
+        // time = d.getTime();
 
         const key = '2c8c1e6560770f3ee472a7dbc4f5b2cb'
         const proxy = 'https://cors-anywhere.herokuapp.com/'
@@ -51,14 +44,14 @@ class App extends Component {
               items: res,
               temperature: this.toCelsius(res.currently.temperature),
               summary: res.currently.summary,
-              // icon: 'rain',
-              icon: res.currently.icon,
+              icon: 'rain',
+              // icon: res.currently.icon,
               location: this.strSlice(res.timezone),
               hourly: this.apiSlice(res.hourly.data, 0, 10),
               daily: this.apiSlice(res.daily.data, 0, 5),
             })
 
-            console.log(res);
+
           })
 
       })
@@ -82,7 +75,8 @@ class App extends Component {
 
 
   render() {
-    let { loading, items } = this.state;
+    let { loading, items, hourly, daily } = this.state;
+    // console.log(items)
 
     if (!loading) {
       return (
@@ -95,16 +89,18 @@ class App extends Component {
     else {
 
       return (
-        <div className={this.state.icon === 'rain' ? 'App App--rain' : 'App'}>
+        <div className={items.icon === 'rain' ? 'App App--rain' : 'App'}>
+
           <Main
-            temperature={this.state.temperature} summary={this.state.summary} location={this.state.location} icon={items.icon} />
+            currently={items.currently} toCelsius={this.toCelsius} location={this.state.location} />
           <div className="wrapper">
-            <WhatToWear temperature={this.state.temperature} location={this.state.location} icon={this.state.icon} />
+            <WhatToWear currently={items.currently} temperature={this.state.temperature} />
           </div>
 
           <div className='BottomSection'>
-            <WeatherToday daily={this.state.daily} hourly={this.state.hourly} weatherConv={this.toCelsius} icon={items.icon} />
+            <WeatherToday daily={daily} hourly={hourly} summaryToday={items.hourly.summary} icon={items.icon} toCelsius={this.toCelsius} />
           </div>
+
         </div>
       )
     }
@@ -112,54 +108,5 @@ class App extends Component {
 }
 
 export default App
-{/* <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-eclipse"><div></div></div><style type="text/css">@keyframes lds-eclipse {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes lds-eclipse {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-.lds-eclipse {
-  position: relative;
-}
-.lds-eclipse div {
-  position: absolute;
-  -webkit-animation: lds-eclipse 1s linear infinite;
-  animation: lds-eclipse 1s linear infinite;
-  width: 160px;
-  height: 160px;
-  top: 20px;
-  left: 20px;
-  border-radius: 50%;
-  box-shadow: 0 4px 0 0 #93dbe9;
-  -webkit-transform-origin: 80px 82px;
-  transform-origin: 80px 82px;
-}
-.lds-eclipse {
-  width: 200px !important;
-  height: 200px !important;
-  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
-  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
-}
-</style></div> */}
+
+
