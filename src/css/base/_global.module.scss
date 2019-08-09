@@ -24,7 +24,8 @@ body,
     }
 
     &--rain {
-        background-image: linear-gradient($main-text, #19294d), url('/images/loader-icon/blur-cars-dew.jpg');
+        background-image: linear-gradient($main-text, #19294d),
+            url('../../../public/images/loader-icon/blur-cars-dew.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

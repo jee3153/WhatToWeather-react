@@ -36,6 +36,7 @@
         ]
     },
     "devDependencies": {
+        "file-loader": "^4.2.0",
         "gh-pages": "^2.1.1"
     }
 }
