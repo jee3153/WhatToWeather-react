@@ -11,7 +11,7 @@
         "react-dom": "^16.8.6",
         "react-scripts": "3.0.1"
     },
-    "homepage": "https://github.com/jee3153/WhatToWeather-react",
+    "homepage": "https://github.io/jee3153/WhatToWeather-react",
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
