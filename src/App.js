@@ -6,8 +6,6 @@ import WeatherToday from './components/BottomSection/WeatherToday/WeatherToday'
 import WhatToWear from './components/BottomSection/WhatToWear/WhatToWear'
 import Spinner from './components/Spinner'
 
-import rainyBg from './assets/blur-cars-dew.jpg'
-
 
 
 class App extends Component {
@@ -78,36 +76,6 @@ class App extends Component {
     return slicer
   }
 
-  rainChecker = () => {
-
-    if (this.state.summary.includes('rain')) {
-      this.setState({
-        backgroundImage: `linear-gradient(#fff, #19294d),
-      url(${rainyBg})`,
-
-      })
-
-
-      // this.style = {
-      //   backgroundImage: `linear-gradient(#fff, #19294d),
-      //     url(${rainyBg})`,
-      //   backgroundRepeat: 'no-repeat',
-      //   backgroundSize: 'cover',
-      //   backgroundPosition: 'center',
-      //   backgroundBlendMode: 'exclusion',
-      // }
-
-    } else {
-      this.setState({
-        backgroundImage: 'linear-gradient($main-text, #19294d)'
-      })
-      // this.style = {
-      //   backgroundImage: 'linear-gradient(#fff, #19294d)'
-      // }
-
-    }
-
-  }
 
 
   render() {
@@ -130,7 +98,7 @@ class App extends Component {
       console.log(daily)
       return (
         <div className={dailySummary.includes('rain') || dailySummary.includes('drizzle') ? 'App App--rain' : 'App'}>
-          <Main
+          <Main dailySummary={dailySummary}
             currently={items.currently} toCelsius={this.toCelsius} location={this.state.location} />
           <div className="wrapper">
             <WhatToWear currently={items.currently} temperature={this.state.temperature} />
@@ -142,38 +110,6 @@ class App extends Component {
 
         </div>
       )
-
-      // if (this.state.summary.includes('rain')) {
-      //   return (
-      //     <div className='App' style={this.style.rainy}>
-      //       <Main
-      //         currently={items.currently} toCelsius={this.toCelsius} location={this.state.location} />
-      //       <div className="wrapper">
-      //         <WhatToWear currently={items.currently} temperature={this.state.temperature} />
-      //       </div>
-
-      //       <div className='BottomSection'>
-      //         <WeatherToday daily={daily} hourly={hourly} summaryToday={items.hourly.summary} icon={items.icon} toCelsius={this.toCelsius} />
-      //       </div>
-
-      //     </div>
-      //   )
-      // } else {
-      //   return (
-      //     <div className='App' style={this.style.clear}>
-      //       <Main
-      //         currently={items.currently} toCelsius={this.toCelsius} location={this.state.location} />
-      //       <div className="wrapper">
-      //         <WhatToWear currently={items.currently} temperature={this.state.temperature} />
-      //       </div>
-
-      //       <div className='BottomSection'>
-      //         <WeatherToday daily={daily} hourly={hourly} summaryToday={items.hourly.summary} icon={items.icon} toCelsius={this.toCelsius} />
-      //       </div>
-
-      //     </div>
-      //   )
-      // }
 
     }
   }

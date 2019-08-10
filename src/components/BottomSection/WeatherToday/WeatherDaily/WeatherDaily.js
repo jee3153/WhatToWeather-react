@@ -47,17 +47,9 @@ const WeatherDaily = (props) => {
 
     // }
 
-    const strSpliter = (str) => {
-        const strArr = str.split('-');
-        const ArrJoin = strArr.join('');
-
-        return ArrJoin
-    }
-
 
     const a = [0, 1, 2, 3, 4]
     let daily = props.daily
-    strSpliter(props.daily[0].icon);
 
     return (
         <div className='WeatherDaily'>

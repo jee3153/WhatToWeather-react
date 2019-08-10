@@ -25,7 +25,6 @@ const WeatherToday = (props) => {
 
     let items = props.daily
 
-    console.log(items);
     return (
 
         <div className='WeatherToday generic'>
