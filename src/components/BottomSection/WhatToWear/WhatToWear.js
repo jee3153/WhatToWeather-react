@@ -87,7 +87,7 @@ const WhatToWear = (props) => {
             <div className='WhatToWear__outfit'>
                 {decisionMaker(props.temperature).map((item, index) => (
                     <div className='WhatToWear__outfit__icons' key={index}>
-                        <img className='WhatToWear__outfit__icons__icon' src={`/images/clothes/${item}.svg`} alt="outfit for today" />
+                        <img className='WhatToWear__outfit__icons__icon' src={`${process.env.PUBLIC_URL}/images/clothes/${item}.svg`} alt="outfit for today" />
                     </div>
                 ))}
                 {outfitSuggestion(props.temperature)}

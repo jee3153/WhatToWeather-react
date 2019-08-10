@@ -1,22 +1,4 @@
 import React from 'react'
-// import ReactDOM from 'react-dom'
-// import ReactSprite from 'react-sprite'
-// import clearday from '../../../../assets/images/weather/clear-day.svg'
-// import clearnight from '../../../../assets/images/weather/clear-night.svg'
-// import cloudy from '../../../../assets/images/weather/cloudy.svg'
-// import fog from '../../../../assets/images/weather/fog.svg'
-// import hail from '../../../../assets/images/weather/hail.svg'
-// import partlycloudyday from '../../../../assets/images/weather/partly-cloudy-day.svg'
-// import partlycloudynight from '../../../../assets/images/weather/partly-cloudy-night.svg'
-// import rain from '../../../../assets/images/weather/rain.svg'
-// import sleet from '../../../../assets/images/weather/sleet.svg'
-// import snow from '../../../../assets/images/weather/snow.svg'
-// import wind from '../../../../assets/images/weather/wind.svg'
-
-// console.log(typeof clearday);
-// console.log(clearday)
-// console.log(clearnight)
-
 
 
 const WeatherDaily = (props) => {

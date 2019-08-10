@@ -17,13 +17,12 @@ const WeatherHourly = (props) => {
                     <li
                         className='WeatherHourly__list-item' key={index}>
                         <p className='WeatherHourly__list-time'>{UnixConvertor(item.time) + ':00'}</p>
-                        <img className='WeatherHourly__list-icon' src={`/images/weather/${item.icon}.svg`} alt="weather icon" />
+                        <img className='WeatherHourly__list-icon' src={`${process.env.PUBLIC_URL}/images/weather/${item.icon}.svg`} alt="weather icon" />
                         <p className='WeatherHourly__list-temp'>{props.toCelsius(item.apparentTemperature)}°</p>
                     </li>
                 ))}
             </ul>
         </div >
-
 
     )
 }
