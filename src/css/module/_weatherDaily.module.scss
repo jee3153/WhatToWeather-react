@@ -11,7 +11,17 @@
         width: 80%;
         height: 14px;
     }
-
+    &__circle--rain {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        background-color: #968d70;
+        border: 1px solid $main-text;
+        border-radius: 50%;
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-4.5px);
+    }
     &__circle {
         position: absolute;
         height: 10px;

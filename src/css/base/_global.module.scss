@@ -20,12 +20,12 @@ body,
 
     &--loading {
         height: 100vh;
-        background-color: #798ab3;
+        background-image: linear-gradient($main-text, #19294d);
     }
 
     &--rain {
-        background-image: linear-gradient($main-text, #19294d),
-            url('../../../public/images/loader-icon/blur-cars-dew.jpg');
+        background-color: #596b96;
+        background-image: url('https://www.discoverycountrysuites.com/files/2018/07/5023-compressed-1024x683.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

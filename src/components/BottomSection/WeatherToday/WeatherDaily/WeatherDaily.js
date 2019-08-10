@@ -1,4 +1,22 @@
 import React from 'react'
+// import ReactDOM from 'react-dom'
+// import ReactSprite from 'react-sprite'
+// import clearday from '../../../../assets/images/weather/clear-day.svg'
+// import clearnight from '../../../../assets/images/weather/clear-night.svg'
+// import cloudy from '../../../../assets/images/weather/cloudy.svg'
+// import fog from '../../../../assets/images/weather/fog.svg'
+// import hail from '../../../../assets/images/weather/hail.svg'
+// import partlycloudyday from '../../../../assets/images/weather/partly-cloudy-day.svg'
+// import partlycloudynight from '../../../../assets/images/weather/partly-cloudy-night.svg'
+// import rain from '../../../../assets/images/weather/rain.svg'
+// import sleet from '../../../../assets/images/weather/sleet.svg'
+// import snow from '../../../../assets/images/weather/snow.svg'
+// import wind from '../../../../assets/images/weather/wind.svg'
+
+// console.log(typeof clearday);
+// console.log(clearday)
+// console.log(clearnight)
+
 
 
 const WeatherDaily = (props) => {
@@ -10,6 +28,7 @@ const WeatherDaily = (props) => {
 
         return week
     }
+
 
     const numToDay = (n) => {
         const weekday = new Array(7);
@@ -46,24 +65,32 @@ const WeatherDaily = (props) => {
 
     // }
 
+    const strSpliter = (str) => {
+        const strArr = str.split('-');
+        const ArrJoin = strArr.join('');
+
+        return ArrJoin
+    }
 
 
     const a = [0, 1, 2, 3, 4]
     let daily = props.daily
+    strSpliter(props.daily[0].icon);
+
     return (
         <div className='WeatherDaily'>
-
             <ul className='WeatherDaily__lists'>
                 <div className="WeatherDaily__template">
                     <div className='WeatherDaily__hr-line'></div>
                     {a.map(i => {
-                        return <div className={`WeatherDaily__circle WeatherDaily__circle-${i}`} key={i} ></div>
+                        return <div className={daily[0].summary.includes('rain') || daily[0].summary.includes('drizzle') ? `WeatherDaily__circle--rain WeatherDaily__circle-${i}` : `WeatherDaily__circle WeatherDaily__circle-${i}`} key={i} ></div>
                     })}
                 </div>
                 {daily.map((item, index) => (
                     <li className={`WeatherDaily__list-item WeatherDaily__list-item-${index}`} key={index}>
 
-                        <img className='WeatherDaily__icon' src={`../../../../../public/images/weather/${item.icon}.svg`} alt="weather icon" />
+                        <img className='WeatherDaily__icon' src={`${process.env.PUBLIC_URL}/images/weather/${item.icon}.svg`} alt="weather icon" />
+
                         <p className='WeatherDaily__day'>{weeklyDays(item.time)}</p>
                         <p className="WeatherDaily__temp">
                             {tempAvg(item.apparentTemperatureMax, item.apparentTemperatureMin)}°
