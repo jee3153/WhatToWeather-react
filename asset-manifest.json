@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/WhatToWeather-react/static/css/main.07dc1a70.chunk.css",
-    "main.js": "/WhatToWeather-react/static/js/main.ca496f0d.chunk.js",
-    "main.js.map": "/WhatToWeather-react/static/js/main.ca496f0d.chunk.js.map",
+    "main.js": "/WhatToWeather-react/static/js/main.6a0ce426.chunk.js",
+    "main.js.map": "/WhatToWeather-react/static/js/main.6a0ce426.chunk.js.map",
     "runtime~main.js": "/WhatToWeather-react/static/js/runtime~main.2c1a43d5.js",
     "runtime~main.js.map": "/WhatToWeather-react/static/js/runtime~main.2c1a43d5.js.map",
-    "static/js/2.5996a945.chunk.js": "/WhatToWeather-react/static/js/2.5996a945.chunk.js",
-    "static/js/2.5996a945.chunk.js.map": "/WhatToWeather-react/static/js/2.5996a945.chunk.js.map",
+    "static/js/2.164617b5.chunk.js": "/WhatToWeather-react/static/js/2.164617b5.chunk.js",
+    "static/js/2.164617b5.chunk.js.map": "/WhatToWeather-react/static/js/2.164617b5.chunk.js.map",
     "index.html": "/WhatToWeather-react/index.html",
-    "precache-manifest.0b0855d2a4a179114fec359ae6b2b0e0.js": "/WhatToWeather-react/precache-manifest.0b0855d2a4a179114fec359ae6b2b0e0.js",
+    "precache-manifest.59c9c65070164e0995fd14dd5f1fdddf.js": "/WhatToWeather-react/precache-manifest.59c9c65070164e0995fd14dd5f1fdddf.js",
     "service-worker.js": "/WhatToWeather-react/service-worker.js",
-    "static/css/main.07dc1a70.chunk.css.map": "/WhatToWeather-react/static/css/main.07dc1a70.chunk.css.map",
-    "static/media/blur-cars-dew.jpg": "/WhatToWeather-react/static/media/blur-cars-dew.82afa63f.jpg"
+    "static/css/main.07dc1a70.chunk.css.map": "/WhatToWeather-react/static/css/main.07dc1a70.chunk.css.map"
   }
 }
