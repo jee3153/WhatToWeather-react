@@ -35,7 +35,7 @@ class App extends Component {
 
         const key = '2c8c1e6560770f3ee472a7dbc4f5b2cb'
         const proxy = 'https://cors-anywhere.herokuapp.com/'
-        const api = `${proxy}https://api.darksky.net/forecast/${key}/${lat},${long}`
+        const api = `https://api.darksky.net/forecast/${key}/${lat},${long}`
 
 
 
