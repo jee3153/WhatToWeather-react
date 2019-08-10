@@ -63,7 +63,7 @@ const WeatherDaily = (props) => {
                 {daily.map((item, index) => (
                     <li className={`WeatherDaily__list-item WeatherDaily__list-item-${index}`} key={index}>
 
-                        <img className='WeatherDaily__icon' src={require(`./../../../../../public/images/weather/${item.icon}.svg`)} alt="weather icon" />
+                        <img className='WeatherDaily__icon' src={require(`./images/weather/${item.icon}.svg`)} alt="weather icon" />
                         <p className='WeatherDaily__day'>{weeklyDays(item.time)}</p>
                         <p className="WeatherDaily__temp">
                             {tempAvg(item.apparentTemperatureMax, item.apparentTemperatureMin)}°
