@@ -81,7 +81,7 @@ class App extends Component {
     if (!loading) {
       return (
         <div className='App App--loading'>
-          <img className='loader-icon' src={require('./images/loader-icon/Eclipse.svg')} alt="loader" />
+          <img className='loader-icon' src={'../public/images/loader-icon/Eclipse.svg'} alt="loader" />
         </div>
       )
 
