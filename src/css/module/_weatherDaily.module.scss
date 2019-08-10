@@ -70,10 +70,13 @@
         position: relative;
         display: inline-block;
         // border: 1px solid red;
-        margin: 0 0.5rem;
+        margin: 0 0.2rem;
         width: 3.1875rem;
         // display: flex;
         // flex-direction: column;
+        @include atHandHeld {
+            margin: 0 0.5;
+        }
         @include atSmall {
             margin: 0 1.5rem;
         }
