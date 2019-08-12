@@ -67,16 +67,17 @@ const WhatToWear = (props) => {
         )
     }
 
-    let items = props.currently;
+    const summaryToday = props.daily[0].summary
+
     return (
         <div className='WhatToWear'>
 
-            {items.icon === 'rain' && (
+            {(summaryToday.includes('rain') || summaryToday.incldues('drizzle')) && (
                 <div className='WhatToWear__rain-warning'>
                     <div className='WhatToWear__rain-warning__icon'>
-                        <img className='WhatToWear__rain-warning__icon__warning' src={`/images/clothes/exclamation.svg`} alt="rain warning" />
-                        <img className='WhatToWear__rain-warning__icon__umbrella' src={`/images/clothes/umbrellataken.svg`} alt="umbrella icon" />
-                        <img className='WhatToWear__rain-warning__icon__raincoat' src={`/images/clothes/raincoat.svg`} alt="raincoat icon" />
+                        <img className='WhatToWear__rain-warning__icon__warning' src={`${process.env.PUBLIC_URL}/images/clothes/exclamation.svg`} alt="rain warning" />
+                        <img className='WhatToWear__rain-warning__icon__umbrella' src={`${process.env.PUBLIC_URL}/images/clothes/umbrellataken.svg`} alt="umbrella icon" />
+                        <img className='WhatToWear__rain-warning__icon__raincoat' src={`${process.env.PUBLIC_URL}/images/clothes/raincoat.svg`} alt="raincoat icon" />
                     </div>
                     <div className='WhatToWear__rain-warning__text'>
                         <p className='WhatToWear__rain-warning__text__rain-msg'>take your umbrella</p>

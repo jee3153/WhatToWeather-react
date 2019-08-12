@@ -101,7 +101,7 @@ class App extends Component {
           <Main dailySummary={dailySummary}
             currently={items.currently} toCelsius={this.toCelsius} location={this.state.location} />
           <div className="wrapper">
-            <WhatToWear currently={items.currently} temperature={this.state.temperature} />
+            <WhatToWear temperature={this.state.temperature} daily={daily} />
           </div>
 
           <div className='BottomSection'>
