@@ -22,6 +22,18 @@
   }
 }
 
+@mixin atXLarge {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin atXXLarge {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
 @mixin atFullScreen {
   @media (min-width: 1900px) {
     @content;

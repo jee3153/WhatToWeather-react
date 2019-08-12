@@ -86,6 +86,12 @@
     @include atLarge {
       margin: 0 4.5rem;
     }
+    @include atXLarge {
+      margin: 0 6.5rem;
+    }
+    @include atXXLarge {
+      margin: 0 9.3rem;
+    }
     @include atFullScreen {
       margin: 0 10.2rem;
     }
