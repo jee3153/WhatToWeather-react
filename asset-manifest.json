@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WhatToWeather-react/static/css/main.377566ac.chunk.css",
-    "main.js": "/WhatToWeather-react/static/js/main.618dcdf0.chunk.js",
-    "main.js.map": "/WhatToWeather-react/static/js/main.618dcdf0.chunk.js.map",
+    "main.js": "/WhatToWeather-react/static/js/main.081856c9.chunk.js",
+    "main.js.map": "/WhatToWeather-react/static/js/main.081856c9.chunk.js.map",
     "runtime~main.js": "/WhatToWeather-react/static/js/runtime~main.2c1a43d5.js",
     "runtime~main.js.map": "/WhatToWeather-react/static/js/runtime~main.2c1a43d5.js.map",
     "static/js/2.65aa1cca.chunk.js": "/WhatToWeather-react/static/js/2.65aa1cca.chunk.js",
     "static/js/2.65aa1cca.chunk.js.map": "/WhatToWeather-react/static/js/2.65aa1cca.chunk.js.map",
     "index.html": "/WhatToWeather-react/index.html",
-    "precache-manifest.4edc5e2dc847827a4871456397a39849.js": "/WhatToWeather-react/precache-manifest.4edc5e2dc847827a4871456397a39849.js",
+    "precache-manifest.15c25c6a74c7ad94a792a910a29cb091.js": "/WhatToWeather-react/precache-manifest.15c25c6a74c7ad94a792a910a29cb091.js",
     "service-worker.js": "/WhatToWeather-react/service-worker.js",
     "static/css/main.377566ac.chunk.css.map": "/WhatToWeather-react/static/css/main.377566ac.chunk.css.map"
   }
