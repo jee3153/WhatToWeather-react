@@ -40,16 +40,8 @@ const WhatToWear = (props) => {
                     <img className='WhatToWear__outfit__icons__icon' src={`${process.env.PUBLIC_URL}/images/clothes/${key}.svg`} alt="outfit for today" />
                 )
             }
-
         }
-
-
-
-
-
     }
-
-
 
     const outfitSuggestion = (temp) => {
         let msg;
@@ -71,10 +63,9 @@ const WhatToWear = (props) => {
 
     return (
         <div className='WhatToWear'>
-
-            {(summaryToday.includes('rain') || summaryToday.incldues('drizzle')) && (
-                <div className='WhatToWear__rain-warning'>
-                    <div className='WhatToWear__rain-warning__icon'>
+            {(summaryToday.includes('rain') || summaryToday.includes('drizzle')) && (
+                <div className="WhatToWear__rain-warning">
+                    <div className="WhatToWear__rain-warning__icon">
                         <img className='WhatToWear__rain-warning__icon__warning' src={`${process.env.PUBLIC_URL}/images/clothes/exclamation.svg`} alt="rain warning" />
                         <img className='WhatToWear__rain-warning__icon__umbrella' src={`${process.env.PUBLIC_URL}/images/clothes/umbrellataken.svg`} alt="umbrella icon" />
                         <img className='WhatToWear__rain-warning__icon__raincoat' src={`${process.env.PUBLIC_URL}/images/clothes/raincoat.svg`} alt="raincoat icon" />
@@ -82,9 +73,11 @@ const WhatToWear = (props) => {
                     <div className='WhatToWear__rain-warning__text'>
                         <p className='WhatToWear__rain-warning__text__rain-msg'>take your umbrella</p>
                     </div>
-
                 </div>
+
+
             )}
+
             <div className='WhatToWear__outfit'>
                 <div className='WhatToWear__outfit__icons'>
                     {decisionMaker(top)}
