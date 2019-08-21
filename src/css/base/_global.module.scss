@@ -1,51 +1,57 @@
 *,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html,
 body,
 #root,
 .App {
-    overflow: auto;
+  overflow: auto;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
 }
 
 .App {
-    height: 100%;
-    text-align: center;
-    color: $main-text;
+  text-align: center;
+  color: $main-text;
+  background-image: linear-gradient($main-text, #19294d);
+
+  &--loading {
+    height: 100vh;
     background-image: linear-gradient($main-text, #19294d);
+  }
 
-    &--loading {
-        height: 100vh;
-        background-image: linear-gradient($main-text, #19294d);
-    }
-
-    &--rain {
-        background-color: #596b96;
-        background-image: url('https://www.discoverycountrysuites.com/files/2018/07/5023-compressed-1024x683.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-blend-mode: exclusion;
-    }
+  &--rain {
+    background-color: #596b96;
+    background-image: url('https://www.discoverycountrysuites.com/files/2018/07/5023-compressed-1024x683.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: exclusion;
+  }
 }
 
 body {
-    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-        'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    // background-image: linear-gradient($main-text, #19294d), url('/images/loader-icon/blur-cars-dew.jpg');
-    // background: center cover no-repeat;
+  // background-image: linear-gradient($main-text, #19294d), url('/images/loader-icon/blur-cars-dew.jpg');
+  // background: center cover no-repeat;
 }
 
 .loader-icon {
-    width: 30px;
-    height: auto;
-    position: relative;
-    top: 50%;
+  width: 30px;
+  height: auto;
+  position: relative;
+  top: 50%;
 }

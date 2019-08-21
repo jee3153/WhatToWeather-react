@@ -53,13 +53,15 @@ const WeatherDaily = (props) => {
 
     return (
         <div className='WeatherDaily'>
+
+            <div className="WeatherDaily__template">
+                <div className='WeatherDaily__hr-line'></div>
+                {a.map(i => {
+                    return <div className={daily[0].summary.includes('rain') || daily[0].summary.includes('drizzle') ? `WeatherDaily__circle--rain WeatherDaily__circle-${i}` : `WeatherDaily__circle WeatherDaily__circle-${i}`} key={i} ></div>
+                })}
+            </div>
+
             <ul className='WeatherDaily__lists'>
-                <div className="WeatherDaily__template">
-                    <div className='WeatherDaily__hr-line'></div>
-                    {a.map(i => {
-                        return <div className={daily[0].summary.includes('rain') || daily[0].summary.includes('drizzle') ? `WeatherDaily__circle--rain WeatherDaily__circle-${i}` : `WeatherDaily__circle WeatherDaily__circle-${i}`} key={i} ></div>
-                    })}
-                </div>
                 {daily.map((item, index) => (
                     <li className={`WeatherDaily__list-item WeatherDaily__list-item-${index}`} key={index}>
 
@@ -69,7 +71,6 @@ const WeatherDaily = (props) => {
                         <p className="WeatherDaily__temp">
                             {tempAvg(item.apparentTemperatureMax, item.apparentTemperatureMin)}°
                         </p>
-
 
                     </li>
                 ))}

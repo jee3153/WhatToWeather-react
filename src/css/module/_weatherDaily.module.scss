@@ -2,8 +2,6 @@
   height: 30%;
   padding: 1rem 1rem 2rem 1rem;
 
-  &__lists {
-  }
   &__template {
     position: relative;
     left: 50%;
@@ -65,36 +63,20 @@
     transform: translateX(-50%);
   }
 
+  &__lists {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+
   &__list-item {
     z-index: 1;
     position: relative;
     display: inline-block;
-    // border: 1px solid red;
     margin: 0 0.2rem;
     width: 3.1875rem;
-    // display: flex;
-    // flex-direction: column;
-    @include atHandHeld {
-      margin: 0 0.5;
-    }
-    @include atSmall {
-      margin: 0 1.5rem;
-    }
-    @include atMedium {
-      margin: 0 3.2rem;
-    }
-    @include atLarge {
-      margin: 0 4.5rem;
-    }
-    @include atXLarge {
-      margin: 0 6.5rem;
-    }
-    @include atXXLarge {
-      margin: 0 9.3rem;
-    }
-    @include atFullScreen {
-      margin: 0 10.2rem;
-    }
   }
 
   &__day {

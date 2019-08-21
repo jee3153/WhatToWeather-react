@@ -22,23 +22,12 @@
   }
 }
 
-@mixin atXLarge {
-  @media (min-width: 1300px) {
-    @content;
-  }
-}
-
 @mixin atXXLarge {
   @media (min-width: 1800px) {
     @content;
   }
 }
 
-@mixin atFullScreen {
-  @media (min-width: 1900px) {
-    @content;
-  }
-}
 // $value: can be a number, 'landscape', or a breakpoint letter
 // $feature: default is min-width,
 // can be overwritten with 'max-width', or 'orientation' etc.
