@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What To Weather : More than just a weather app
 
-## Available Scripts
+You can check out the app at:  [https://jee3153.github.io/WhatToWeather-react/]
 
-In the project directory, you can run:
+## What is What To Weather?
 
-### `npm start`
+What to weather is an weather web app that helps you to save your time by choosing outfit for you every busy morning.
+You don’t  need to worry about checking the temperature then spend your time on what to wear according to weather.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What features are there? 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1) Clothing icons will give you an daily idea of what could be ideal for the weather. And description of detailed weather today.
+2) Rainy background on rainy day with small warning for umbrella take.
+3) Hourly and Weekly (5days) weather information.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+•React - web framework in javascript
+•Sass - style sheet language
+•API Fetch - darksky.net
 
-### `npm run build`
+## Author
+Ji Yang 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Acknowledgements
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+###Inspiration 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Looking at numbers on weather app and think what to wear can be time-consuming sometimes. 
+We sometimes have ourself to wrong outfit and think oh, I should have worn jacket, or today is a bit hotter than I thought.
+However, we are too busy for these things,  we don’t want to experience any inconvenience either.
+Instead of looking at confusing numbers in Celsius or Fahrenheit, what about getting an idea what to wear visually through icons? 
