@@ -16,7 +16,9 @@ You don’t  need to worry about checking the temperature then spend your time o
 ## Built With
 
 •React - web framework in javascript
+
 •Sass - style sheet language
+
 •API Fetch - darksky.net
 
 ## Author
